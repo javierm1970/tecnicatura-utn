@@ -1,0 +1,125 @@
+# depslib dependency file v1.0
+1570583465 source:d:\magdaleno_javier_1f\juegos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570583437 d:\magdaleno_javier_1f\juegos\clientes.h
+
+1570583417 d:\magdaleno_javier_1f\juegos\utn.h
+
+1570584034 source:d:\magdaleno_javier_1f\juegos\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570582511 source:d:\magdaleno_javier_1f\juegos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570561532 source:d:\examen 8-10\juegos\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570559919 d:\examen 8-10\juegos\clientes.h
+
+1570518377 d:\examen 8-10\juegos\utn.h
+
+1570561167 source:d:\examen 8-10\juegos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570518377 source:d:\examen 8-10\juegos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570561534 source:f:\codigo limpio\juegos\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570559920 f:\codigo limpio\juegos\clientes.h
+
+1570518378 f:\codigo limpio\juegos\utn.h
+
+1570518378 source:f:\codigo limpio\juegos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570562132 source:f:\codigo limpio\juegos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570597486 source:d:\examen 8-10\ultimo\juegos\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570595543 d:\examen 8-10\ultimo\juegos\clientes.h
+
+1570583418 d:\examen 8-10\ultimo\juegos\utn.h
+
+1570597290 source:d:\examen 8-10\ultimo\juegos\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
+1570595595 source:d:\examen 8-10\ultimo\juegos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"./Clientes.h"
+	"./utn.h"
+
