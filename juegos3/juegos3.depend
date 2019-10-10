@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1570688439 source:d:\examen 8-10\juegos2\juegos3\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"clientes.h"
+	"utn.h"
+
+1570686590 d:\examen 8-10\juegos2\juegos3\clientes.h
+
+1570673238 d:\examen 8-10\juegos2\juegos3\utn.h
+
+1570677710 source:d:\examen 8-10\juegos2\juegos3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"clientes.h"
+	"utn.h"
+
+1570688573 source:d:\examen 8-10\juegos2\juegos3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"./clientes.h"
+	"./utn.h"
+
