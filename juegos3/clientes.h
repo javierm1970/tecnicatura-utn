@@ -13,7 +13,7 @@ char name[51];
 char lastName[51];
 char domicilio[51];
 char sexo;
-char telefono[10];
+char telefono[12];
 int isEmpty;
 
 }Clientes;
@@ -168,6 +168,15 @@ int printClientes(Clientes* list,int lenC);
 
 int printOneCliente(Clientes cli);
 
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+
+int printJuegos(Juegos* list,int lenJ);
 
 /** \brief
  *
@@ -178,7 +187,60 @@ int printOneCliente(Clientes cli);
  */
  void bubbleSortAlqFecha (Alquileres* list ,int len);
 
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
+  int PromedioJuegos(Alquileres* list,Juegos* list3, int len,int lenJ);
 
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+ int PromedioJuegos2(Alquileres* list,Juegos* list3, int len,int lenJ);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+ int JuegosMenosAlquilados(Alquileres* list,Juegos* list3, int len,int lenJ);
+
+
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
+
+void bubbleSortCodJuegos (Juegos* list ,int len);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+ int ClienteMasAlquila(Alquileres* list,Clientes* list3, int lenA,int lenC);
+
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
 
 /** \brief
  *
@@ -188,5 +250,22 @@ int printOneCliente(Clientes cli);
  *
  */
 
+int AlquileresPorCliente(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ);
 
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 
+int AlquileresPorJuego(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */

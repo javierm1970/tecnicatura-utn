@@ -328,6 +328,144 @@ int printJuegos(Juegos* list,int lenJ)
  return 0;
 }
 
+int AlquileresPorJuego(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ)
+{
+    int i;
+    int r;
+    int cod;
+    int max=lenA; //lenA=maximo alqui //lenC=maximo clientes //lenJ=maximo juegos
+
+    Alquileres alquil;
+    Clientes clie;
+    Juegos gam;
+
+
+    //Ordenamiento Alquileres por fecha ascendente
+    //bubbleSortAlqFecha(list,lenA);
+    bubbleSortAlqFecha(list,lenA);
+
+    do{
+        printJuegos(list3,lenJ);
+
+        r=getInt(&cod,"\nIngrese Codigo: ","Error, excedido o no existe",1,max);
+        if (r!=1) continue;
+    }while (r!=1);
+
+     //titulo si se lista Alquileres c/clientes y juegos
+    printf("\nFecha \t\tCod A \tCod C \tNom \tApe \tCod J \tDes J      \tPrecio \n");
+    rellena_Espacio('-',78,1);
+
+
+    /*  //titulo si se lista clientes
+    printf("\n\tCod Cli \tApe \tNom \tDomicilio \tSexo \tTelefono\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    /*  //titulo si se lista juegos
+    printf("\n\tCod Jue \tDescr \tPrecio\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    for (i=0;i<lenA;i++)
+    {
+         //en el if recorre alquileres mientras codJuego/codAlq/codclie == cod(ing usuario)
+        if (list[i].isEmpty!=1 && list[i].codAlquiler!=0 && list[i].CodJuego==cod)
+        {
+            //busca y trae una structure Clientes con los datos [i]
+            clie=findClienteByDesc2(list2,lenC,list[i].codCliente);
+
+            //busca y trae una structure juegos con los datos [i]
+            gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
+
+            //crea una estructura Alquileres con los datos de [i]
+            alquil=list[i];
+
+            //imprime un registro alquileres + datos Clientes + datos juegos
+            printOneAlquiler(alquil,clie.name,clie.lastName,gam.descripcion,gam.precio);
+
+            //imprime datos de clientes sacados de alquileres [i]
+            //printOneCliente(clie);
+
+            //imprime datos de juegos sacados de alquileres [i]
+            //printOneJuego(gam);
+
+        }
+    }
+
+ printf("\n\n");
+ return 0;
+}
+
+
+int AlquileresPorCliente(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ)
+{
+    int i;
+    int r;
+    int cod;
+    int max=lenA; //lenA=maximo alqui //lenC=maximo clientes //lenJ=maximo juegos
+
+    Alquileres alquil;
+    Clientes clie;
+    Juegos gam;
+
+
+    //Ordenamiento Alquileres por fecha ascendente
+    //bubbleSortAlqFecha(list,lenA);
+    bubbleSortAlqFecha(list,lenA);
+
+    do{
+        printClientes(list2,lenC);
+
+        r=getInt(&cod,"\nIngrese Codigo: ","Error, excedido o no existe",1,max);
+        if (r!=1) continue;
+    }while (r!=1);
+
+     //titulo si se lista Alquileres c/clientes y juegos
+    printf("\nFecha \t\tCod A \tCod C \tNom \tApe \tCod J \tDes J      \tPrecio \n");
+    rellena_Espacio('-',78,1);
+
+
+    /*  //titulo si se lista clientes
+    printf("\n\tCod Cli \tApe \tNom \tDomicilio \tSexo \tTelefono\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    /*  //titulo si se lista juegos
+    printf("\n\tCod Jue \tDescr \tPrecio\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    for (i=0;i<lenA;i++)
+    {
+         //en el if recorre alquileres mientras codJuego/codAlq/codclie == cod(ing usuario)
+        if (list[i].isEmpty!=1 && list[i].codAlquiler!=0 && list[i].codCliente==cod)
+        {
+            //busca y trae una structure Clientes con los datos [i]
+            clie=findClienteByDesc2(list2,lenC,list[i].codCliente);
+
+            //busca y trae una structure juegos con los datos [i]
+            gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
+
+            //crea una estructura Alquileres con los datos de [i]
+            alquil=list[i];
+
+            //imprime un registro alquileres + datos Clientes + datos juegos
+            printOneAlquiler(alquil,clie.name,clie.lastName,gam.descripcion,gam.precio);
+
+            //imprime datos de clientes sacados de alquileres [i]
+            //printOneCliente(clie);
+
+            //imprime datos de juegos sacados de alquileres [i]
+            //printOneJuego(gam);
+
+        }
+    }
+
+ printf("\n\n");
+ return 0;
+}
+
+
 int printAlquileres(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ)
 {
     int i;
@@ -340,53 +478,54 @@ int printAlquileres(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int 
     Juegos gam;
 
 
-    /* //titulo si se lista Alquileres c/clientes y juegos
+    //Ordenamiento Alquileres por fecha ascendente
+    //bubbleSortAlqFecha(list,lenA);
+    bubbleSortCodJuegos(list3,lenJ);
+
+    do{
+        printClientes(list2,lenC);
+
+        r=getInt(&cod,"\nIngrese Codigo: ","Error, excedido o no existe",1,max);
+        if (r!=1) continue;
+    }while (r!=1);
+
+     //titulo si se lista Alquileres c/clientes y juegos
     printf("\nFecha \t\tCod A \tCod C \tNom \tApe \tCod J \tDes J      \tPrecio \n");
     rellena_Espacio('-',78,1);
-    */
+
 
     /*  //titulo si se lista clientes
     printf("\n\tCod Cli \tApe \tNom \tDomicilio \tSexo \tTelefono\n");
     rellena_Espacio('-',78,1);
     */
 
-      //titulo si se lista juegos
+    /*  //titulo si se lista juegos
     printf("\n\tCod Jue \tDescr \tPrecio\n");
     rellena_Espacio('-',78,1);
-
-
-
-    //Ordenamiento Alquileres por fecha ascendente
-    bubbleSortAlqFecha(list,lenA);
-
-    do{
-        r=getInt(&cod,"\nIngrese Codigo: ","Error, excedido o no existe",1,max);
-        if (r!=1) continue;
-    }while (r==);
-
+    */
 
     for (i=0;i<lenA;i++)
     {
          //en el if recorre alquileres mientras codJuego/codAlq/codclie == cod(ing usuario)
-        if (list[i].isEmpty!=1 && list[i].codAlquiler!=0 && list[i].CodJuego==cod)
+        if (list[i].isEmpty!=1 && list[i].codAlquiler!=0 && list[i].codCliente==cod)
         {
             //busca y trae una structure Clientes con los datos [i]
-            //clie=findClienteByDesc2(list2,lenC,list[i].codCliente);
+            clie=findClienteByDesc2(list2,lenC,list[i].codCliente);
 
             //busca y trae una structure juegos con los datos [i]
             gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
 
             //crea una estructura Alquileres con los datos de [i]
-            //alquil=list[i];
+            alquil=list[i];
 
             //imprime un registro alquileres + datos Clientes + datos juegos
-            //printOneAlquiler(alquil,clie.name,clie.lastName,gam.descripcion,gam.precio);
+            printOneAlquiler(alquil,clie.name,clie.lastName,gam.descripcion,gam.precio);
 
             //imprime datos de clientes sacados de alquileres [i]
             //printOneCliente(clie);
 
             //imprime datos de juegos sacados de alquileres [i]
-            printOneJuego(gam);
+            //printOneJuego(gam);
 
         }
     }
@@ -416,13 +555,22 @@ char muestraMenu(void)
     printf("\nc- ");
     printf("\nd- ");
     printf("\ne- ");
-    printf("\nf- Alquileres x Fecha");
-    printf("\ng- Muestra Alquileres");
+    printf("\nf- ");
+    printf("\ng- ");
+    printf("\nh- ");
+    printf("\ni- Clientes x juego");
+    printf("\nj- juegos x clientes");
+    printf("\nk- Juegos menos alquilados");
+    printf("\nl- Cliente que mas alquilo");
+    printf("\nm- Juegos Alquilados x Fecha");
+    printf("\nn- Clientes que Alquilaron en una fecha");
+    printf("\no- Juegos x importes (desc) B.E.");
+    printf("\np- Clientes x Apellido (asc) M.I.");
     printf("\n\ns- Salida");
 
     printf("\n\n ");
-    opcion=getChar2("Ingrese una Opcion / <s> para Salir");
-
+    opcion=getChar2("\nIngrese una Opcion / <s> para Salir ");
+    printf("\n ");
     return opcion;
 
 }
@@ -462,6 +610,38 @@ int printClientes(Clientes* list,int lenC)
  return 0;
 }
 
+void bubbleSortCodJuegos (Juegos* list ,int len)
+{
+    int j;
+    //int f1;
+    //int f2;
+
+    Juegos aux;
+
+    int flagNoEstaOrdenado = 1;
+
+    while (flagNoEstaOrdenado==1)
+    {
+
+      flagNoEstaOrdenado = 0;
+
+        for (j = 1; j < len; j++)
+	    {
+            //f1=(list[j].fecAlquiler.anio*10000)+(list[j].fecAlquiler.mes*100)+list[j].fecAlquiler.dia;
+            //f2=(list[j-1].fecAlquiler.anio*10000)+(list[j-1].fecAlquiler.mes*100)+list[j-1].fecAlquiler.dia;
+            //printf("%d      %d       %d    %d",list[j].fecAlquiler,list[j-1].fecAlquiler,f1,f2);system("pause");
+            //if(list[j].precio < list[j-1].precio)
+            if(list[j].CodJuego > list[j-1].CodJuego)
+	        {
+                aux = list[j];
+                list[j] = list[j - 1];
+                list[j - 1] = aux;
+
+                flagNoEstaOrdenado = 1;
+            }
+        }
+    }
+ }
 
 void bubbleSortAlqFecha (Alquileres* list ,int len)
 {
@@ -484,7 +664,7 @@ void bubbleSortAlqFecha (Alquileres* list ,int len)
             f2=(list[j-1].fecAlquiler.anio*10000)+(list[j-1].fecAlquiler.mes*100)+list[j-1].fecAlquiler.dia;
             //printf("%d      %d       %d    %d",list[j].fecAlquiler,list[j-1].fecAlquiler,f1,f2);system("pause");
             //if(list[j].precio < list[j-1].precio)
-            if(f1 < f2)
+            if(f1 > f2)
 	        {
                 aux = list[j];
                 list[j] = list[j - 1];
@@ -495,3 +675,216 @@ void bubbleSortAlqFecha (Alquileres* list ,int len)
         }
     }
  }
+
+ int PromedioJuegos(Alquileres* list,Juegos* list3, int len,int lenJ)
+{
+    int i;
+    int j;
+    int res=-1;
+    float prom=0;
+    float promedio=0;
+    int cantCli=0;
+    int supProm=0;
+
+    Juegos gam;
+
+     for (i=0;i<len;i++)
+    {
+        if(list[i].isEmpty==0)
+        {
+            gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
+
+            prom = prom + gam.precio;
+            cantCli++;
+
+        }
+    }
+    promedio=prom/cantCli;
+    printf("\n\n\n");
+    printf("\nEl promedio de todos los Juegos Alquilados es: %2.f \n",promedio);
+    printf("\nLa suma de todos los Juegos es: %2.f \n",prom);
+
+    for (j=0;j<lenJ;j++)
+    {
+           //precJ=findJuegoByDesc(list3,lenJ,list[i].CodJuego,descJ);
+
+            if (promedio>list3[j].precio)
+            {
+                supProm++;
+            }
+    }
+
+    //printf("\n\n\n");
+    //printf("\n\n\n");
+    //printf("\nLa cantidad de juegos debajo de la media es: %d \n\n\n",supProm);
+    printf("\n\n");
+    res=0;
+
+    return res;
+}
+
+ int PromedioJuegos2(Alquileres* list,Juegos* list3, int len,int lenJ)
+{
+    int i;
+    int j;
+    int res=-1;
+    float prom=0;
+    float promedio=0;
+    int cantCli=0;
+    int supProm=0;
+
+    Juegos gam;
+
+     for (i=0;i<len;i++)
+    {
+        if(list[i].isEmpty==0)
+        {
+            gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
+
+            prom = prom + gam.precio;
+            cantCli++;
+
+        }
+    }
+    promedio=prom/cantCli;
+//    printf("\n\n\n");
+//    printf("\nEl promedio de todos los Juegos Alquilados es: %2.f \n",promedio);
+//    printf("\nLa suma de todos los Juegos es: %2.f \n",prom);
+
+    for (j=0;j<lenJ;j++)
+    {
+           //precJ=findJuegoByDesc(list3,lenJ,list[i].CodJuego,descJ);
+
+            if (promedio>list3[j].precio)
+            {
+                supProm++;
+            }
+    }
+
+    printf("\n\n\n");
+    printf("\n\n\n");
+    printf("\nLa cantidad de juegos debajo de la media es: %d \n\n\n",supProm);
+    printf("\n\n");
+    res=0;
+
+    return res;
+}
+
+ int JuegosMenosAlquilados(Alquileres* list,Juegos* list3, int len,int lenJ)
+{
+    int j;
+    int k;
+    int res=-1;
+    int cantJueAlq=0;
+    int cantJue2=0;
+    int cantJueMenor=0;
+    int flagPrimerJ=0;
+
+    Juegos gam;
+
+    for (j=0;j<lenJ;j++)
+    {
+        for (k=0;k<len;k++)
+        {
+            if(list[k].CodJuego==list3[j].id)
+            {
+                cantJueAlq++;
+            }
+        }
+        if(flagPrimerJ==0)
+        {
+            cantJueMenor=cantJueAlq;
+            flagPrimerJ=1;
+        }
+        else
+        {
+            if(cantJueAlq>cantJueMenor)
+            {
+                cantJueMenor=cantJueAlq;
+            }
+        }
+        cantJueAlq=0;
+
+    }
+
+     for (j=0;j<lenJ;j++)
+     {
+        for (k=0;k<len;k++)
+        {
+            if(list[k].CodJuego==list3[j].id)
+            {
+                cantJue2++;
+            }
+        }
+        if (cantJue2==cantJueMenor)
+        {
+            gam=findJuegoByDesc(list3,lenJ,list[j].CodJuego);
+            printOneJuego(gam);
+        }
+        cantJue2=0;
+
+     }
+    printf("\n");
+    return res;
+}
+
+ int ClienteMasAlquila(Alquileres* list,Clientes* list3, int lenA,int lenC)
+{
+    int j;
+    int k;
+    int res=-1;
+    int cantCliAlq=0;
+    //int cantCli2=0;
+    int cantCliMayor=0;
+    int flagPrimerJ=0;
+
+    Clientes clie;
+
+    for (j=0;j<lenC;j++)
+    {
+        for (k=0;k<lenA;k++)
+        {
+            if (list3[j].id==list[k].codCliente)
+            {
+                cantCliAlq++;
+            }
+        }
+        if(flagPrimerJ==0 && cantCliAlq>0)
+        {
+            cantCliMayor=cantCliAlq;
+            flagPrimerJ=1;
+        }
+        else
+        {
+            //< mas alquilan || > menos alquilan
+            if(cantCliMayor<cantCliAlq && cantCliAlq>0)
+            {
+                cantCliMayor=cantCliAlq;
+            }
+        }
+        cantCliAlq=0;
+
+    }
+    //printf("%d",cantCliMayor);system("pause");
+//****************************************************************
+    cantCliAlq=0;
+    for (j=0;j<lenC;j++)
+    {
+        for (k=0;k<lenA;k++)
+        {
+            if (list3[j].id==list[k].codCliente)
+            {
+                cantCliAlq++;
+            }
+        }
+        if (cantCliAlq==cantCliMayor)
+        {
+            clie=findClienteByDesc2(list3,lenC,list3[j].id);
+            printOneCliente(clie);
+        }
+        cantCliAlq=0;
+
+     }
+    printf("\n");
+    return res;
+}

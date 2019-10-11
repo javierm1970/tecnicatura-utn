@@ -13,7 +13,7 @@ char name[51];
 char lastName[51];
 char domicilio[51];
 char sexo;
-char telefono[10];
+char telefono[12];
 int isEmpty;
 
 }Clientes;
@@ -93,13 +93,13 @@ int findNextIdClientes(Clientes* list, int len);
 
 int findClienteByDesc (Clientes* list,int lenC,int idC,char resul[],char resul2[]);
 
-/** \brief 
+/** \brief
  *
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- */     
+ */
 Clientes findClienteByDesc2 (Clientes* list,int lenC,int idC);
 
 /** \brief
@@ -109,7 +109,7 @@ Clientes findClienteByDesc2 (Clientes* list,int lenC,int idC);
  * \return
  *
  */
-float findJuegoByDesc (Juegos* list,int lenJ,int idJ,char resul[]);
+Juegos findJuegoByDesc (Juegos* list,int lenJ,int idJ);
 
 /** \brief
  *
@@ -146,7 +146,7 @@ void MuestraAlquiler(Alquileres* list,Clientes* list2,Juegos* list3,
   * \return
   *
   */
-int printOneAlquiler(int codA,Fecha fecA,int codC,int codJ,char nomC[],char apeC[],char descJ[],float preJ);
+int printOneAlquiler(Alquileres alquil,char nomC[],char apeC[],char descJ[],float preJ);
 
 /** \brief
  *
@@ -166,7 +166,7 @@ int printClientes(Clientes* list,int lenC);
  *
  */
 
-int printOneCliente(int codC,char nomC[],char apeC[],char domC[],char sex,char telefC[]);
+int printOneCliente(Clientes cli);
 
 
 /** \brief
@@ -178,7 +178,14 @@ int printOneCliente(int codC,char nomC[],char apeC[],char domC[],char sex,char t
  */
  void bubbleSortAlqFecha (Alquileres* list ,int len);
 
-
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
+  int PromedioJuegos(Alquileres* list,Juegos* list3, int len,int lenJ);
 
 /** \brief
  *
@@ -187,6 +194,43 @@ int printOneCliente(int codC,char nomC[],char apeC[],char domC[],char sex,char t
  * \return
  *
  */
+ int PromedioJuegos2(Alquileres* list,Juegos* list3, int len,int lenJ);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+ int JuegosMenosAlquilados(Alquileres* list,Juegos* list3, int len,int lenJ);
 
 
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
 
+void bubbleSortCodJuegos (Alquileres* list ,int len);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+ int ClienteMasAlquila(Alquileres* list,Clientes* list3, int lenA,int lenC);
+
+ /** \brief
+  *
+  * \param
+  * \param
+  * \return
+  *
+  */
+
+  

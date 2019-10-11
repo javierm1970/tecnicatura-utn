@@ -6,8 +6,8 @@
 #include "clientes.h"
 #include "utn.h"
 
-#define MAX_CLIENTES 27
-#define MAX_ALQUILERES 28
+#define MAX_CLIENTES 19
+#define MAX_ALQUILERES 29
 #define MAX_JUEGOS 5
 
 int main()
@@ -22,15 +22,15 @@ int main()
 
     int flagSalida=0;
     char opcion;
-    
+
     do
     {
-        opcion=muestraMenu(void);
+        opcion=muestraMenu();
 
         switch(opcion)
         {
             case 'a':
-                MuestraAlquiler(alqui,client,game,MAX_ALQUILERES,MAX_CLIENTES,MAX_JUEGOS);
+
                 system("pause");
                 break;
 
@@ -50,6 +50,65 @@ int main()
                 break;
 
             case 'e':
+
+                system("pause");
+                break;
+
+            case 'f':
+
+                system("pause");
+                break;
+
+            case 'g':
+                PromedioJuegos(alqui,game,MAX_ALQUILERES,MAX_JUEGOS);
+                system("pause");
+                break;
+
+            case 'h':
+                PromedioJuegos2(alqui,game,MAX_ALQUILERES,MAX_JUEGOS);
+                system("pause");
+                break;
+
+            case 'i':
+
+                //printClientes(client,MAX_CLIENTES);
+                system("pause");
+                break;
+
+            case 'j':
+
+                //JuegosMenosAlquilados(alqui,game,MAX_ALQUILERES,MAX_JUEGOS);
+                system("pause");
+                break;
+
+            case 'k':
+                JuegosMenosAlquilados(alqui,game,MAX_ALQUILERES,MAX_JUEGOS);
+                //printAlquileres(alqui,client,game,MAX_ALQUILERES,MAX_CLIENTES,MAX_JUEGOS);
+                system("pause");
+                break;
+
+            case 'l':
+                ClienteMasAlquila(alqui,client,MAX_ALQUILERES,MAX_CLIENTES);                
+                //MuestraAlquiler(alqui,client,game,MAX_ALQUILERES,MAX_CLIENTES,MAX_JUEGOS);
+                break;
+
+            case 'm':
+                
+                //ClienteMasAlquila(alqui,client,MAX_ALQUILERES,MAX_CLIENTES);
+                system("pause");
+                break;
+
+            case 'n':
+
+                system("pause");
+                break;
+
+            case 'o':
+
+                system("pause");
+                break;
+
+            case 'p':
 
                 system("pause");
                 break;
