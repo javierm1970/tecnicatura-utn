@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <BrowseTracker_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="clientes.c" open="1" top="1" tabpos="2">
-		<Cursor position="12864" topLine="624" />
-		<BrowseMarks positions="" />
-		<Book_Marks positions="" />
-	</File>
-	<File name="clientes.h" open="1" top="0" tabpos="4">
-		<Cursor position="188" topLine="0" />
-		<BrowseMarks positions="" />
-		<Book_Marks positions="" />
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="2701" topLine="93" />
 	</File>
 	<File name="utn.c" open="1" top="0" tabpos="3">
-		<Cursor position="3477" topLine="86" />
+		<Cursor position="1948" topLine="31" />
+	</File>
+	<File name="clientes.h" open="1" top="0" tabpos="4">
+		<Cursor position="2739" topLine="217" />
 		<BrowseMarks positions="" />
 		<Book_Marks positions="" />
 	</File>
 	<File name="utn.h" open="1" top="0" tabpos="5">
 		<Cursor position="4415" topLine="0" />
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1">
-		<Cursor position="142" topLine="47" />
+	<File name="clientes.c" open="1" top="1" tabpos="2">
+		<Cursor position="14886" topLine="625" />
 		<BrowseMarks positions="" />
 		<Book_Marks positions="" />
 	</File>

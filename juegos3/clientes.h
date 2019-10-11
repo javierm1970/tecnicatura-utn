@@ -269,3 +269,13 @@ int AlquileresPorJuego(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,i
  * \return
  *
  */
+
+int AlquileresPorFecha(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ);
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */

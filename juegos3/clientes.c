@@ -328,6 +328,74 @@ int printJuegos(Juegos* list,int lenJ)
  return 0;
 }
 
+int AlquileresPorFecha(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ)
+{
+    int i;
+    int r;
+    int cod;
+    int max=lenA; //lenA=maximo alqui //lenC=maximo clientes //lenJ=maximo juegos
+
+    Alquileres alquil;
+    Clientes clie;
+    Juegos gam;
+
+
+    //Ordenamiento Alquileres por fecha ascendente
+    //bubbleSortAlqFecha(list,lenA);
+    bubbleSortAlqFecha(list,lenA);
+
+    do{
+        printJuegos(list3,lenJ);
+
+        r=getInt(&cod,"\nIngrese Codigo: ","Error, excedido o no existe",1,max);
+        if (r!=1) continue;
+    }while (r!=1);
+
+     //titulo si se lista Alquileres c/clientes y juegos
+    printf("\nFecha \t\tCod A \tCod C \tNom \tApe \tCod J \tDes J      \tPrecio \n");
+    rellena_Espacio('-',78,1);
+
+
+    /*  //titulo si se lista clientes
+    printf("\n\tCod Cli \tApe \tNom \tDomicilio \tSexo \tTelefono\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    /*  //titulo si se lista juegos
+    printf("\n\tCod Jue \tDescr \tPrecio\n");
+    rellena_Espacio('-',78,1);
+    */
+
+    for (i=0;i<lenA;i++)
+    {
+         //en el if recorre alquileres mientras codJuego/codAlq/codclie == cod(ing usuario)
+        if (list[i].isEmpty!=1 && list[i].codAlquiler!=0 && list[i].CodJuego==cod)
+        {
+            //busca y trae una structure Clientes con los datos [i]
+            clie=findClienteByDesc2(list2,lenC,list[i].codCliente);
+
+            //busca y trae una structure juegos con los datos [i]
+            gam=findJuegoByDesc(list3,lenJ,list[i].CodJuego);
+
+            //crea una estructura Alquileres con los datos de [i]
+            alquil=list[i];
+
+            //imprime un registro alquileres + datos Clientes + datos juegos
+            printOneAlquiler(alquil,clie.name,clie.lastName,gam.descripcion,gam.precio);
+
+            //imprime datos de clientes sacados de alquileres [i]
+            //printOneCliente(clie);
+
+            //imprime datos de juegos sacados de alquileres [i]
+            //printOneJuego(gam);
+
+        }
+    }
+
+ printf("\n\n");
+ return 0;
+}
+
 int AlquileresPorJuego(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ)
 {
     int i;
