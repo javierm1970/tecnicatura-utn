@@ -4,10 +4,10 @@
 #include <string.h>
 #include <conio.h>
 
-#include "./clientes.h"
+#include "./biblioPrueba.h"
 #include "./utn.h"
 
-
+/*
 int hardCord(Juegos gam[],int len)
 {
     int res=0;
@@ -32,27 +32,35 @@ int hardCord2(Clientes clie[],int len)
     int res=0;
     int i;
 
-            Clientes aux1[19]={{10,"nom10","ape10","dom10",'f',"1111111111",0},
-                               {11,"nom11","ape11","dom11",'f',"2211111111",0},
-                               {12,"nom12","ape12","dom12",'f',"2211111111",0},
-                               {13,"nom13","ape13","dom13",'m',"3311111111",0},
-                               {14,"nom14","ape14","dom14",'m',"4411111111",0},
-                               {15,"nom15","ape15","dom15",'m',"5511111111",0},
-                               {16,"nom16","ape16","dom16",'f',"6611111111",0},
-                               {17,"nom17","ape17","dom17",'f',"7711111111",0},
-                               {18,"nom18","ape18","dom18",'m',"8811111111",0},
-                               {19,"nom19","ape19","dom19",'f',"1111111111",0},
-                               {20,"nom20","ape20","dom20",'f',"1111111111",0},
-                               {21,"nom21","ape21","dom21",'f',"1111111111",0},
-                               {22,"nom22","ape22","dom22",'f',"2211111111",0},
-                               {23,"nom23","ape23","dom23",'m',"3311111111",0},
-                               {24,"nom24","ape24","dom24",'m',"4411111111",0},
-                               {25,"nom25","ape25","dom25",'m',"5511111111",0},
-                               {26,"nom26","ape26","dom26",'f',"6611111111",0},
-                               {27,"nom27","ape27","dom27",'f',"7711111111",0},
-                               {28,"nom28","ape28","dom28",'m',"8811111111",0}};
+            Clientes aux1[27]={{1,"nom1","ape1","dom1",'f',"1111111111",0},
+                              {2,"nom2","ape2","dom2",'f',"2211111111",0},
+                              {3,"nom3","ape3","dom3",'m',"3311111111",0},
+                              {4,"nom4","ape4","dom4",'m',"4411111111",0},
+                              {5,"nom5","ape5","dom5",'m',"5511111111",0},
+                              {6,"nom6","ape6","dom6",'f',"6611111111",0},
+                              {7,"nom7","ape7","dom7",'f',"7711111111",0},
+                              {8,"nom8","ape8","dom8",'m',"8811111111",0},
+                              {9,"nom9","ape9","dom9",'f',"1111111111",0},
+                              {10,"nom10","ape10","dom10",'f',"1111111111",0},
+                              {12,"nom12","ape12","dom12",'f',"2211111111",0},
+                              {13,"nom13","ape13","dom13",'m',"3311111111",0},
+                              {14,"nom14","ape14","dom14",'m',"4411111111",0},
+                              {15,"nom15","ape15","dom15",'m',"5511111111",0},
+                              {16,"nom16","ape16","dom16",'f',"6611111111",0},
+                              {17,"nom17","ape17","dom17",'f',"7711111111",0},
+                              {18,"nom18","ape18","dom18",'m',"8811111111",0},
+                              {19,"nom19","ape19","dom19",'f',"1111111111",0},
+                              {21,"nom21","ape21","dom21",'f',"1111111111",0},
+                              {22,"nom22","ape22","dom22",'f',"2211111111",0},
+                              {23,"nom23","ape23","dom23",'m',"3311111111",0},
+                              {24,"nom24","ape24","dom24",'m',"4411111111",0},
+                              {25,"nom25","ape25","dom25",'m',"5511111111",0},
+                              {26,"nom26","ape26","dom26",'f',"6611111111",0},
+                              {27,"nom27","ape27","dom27",'f',"7711111111",0},
+                              {28,"nom28","ape28","dom28",'m',"8811111111",0},
+                              {29,"nom29","ape29","dom29",'f',"1111111111",0}};
 
-    for (i=0;i<19;i++){
+    for (i=0;i<27;i++){
 
          clie[i]=aux1[i];
     }
@@ -65,45 +73,44 @@ int hardCord3(Alquileres alq[],int len)
     int res=0;
     int i;
 
-            Alquileres aux1[29]={{1,13,1,{1908,1,1},0},
-                                 {2,14,2,{1920,2,1},0},
-                                 {3,12,5,{1930,3,1},0},
-                                 {4,11,5,{1930,4,1},0},
-                                 {5,12,5,{1930,5,1},0},
+            Alquileres aux1[28]={{1,1,1,{1900,1,1},0},
+                                 {2,14,1,{1920,2,1},0},
+                                 {3,24,2,{1930,3,1},0},
+                                 {4,1,4,{1930,4,1},0},
+                                 {5,2,5,{1930,5,1},0},
                                  {6,16,3,{1940,1,1},0},
-                                 {7,12,3,{1940,6,1},0},
-                                 {8,12,3,{1950,7,2},0},
-                                 {9,12,3,{1950,9,3},0},
-                                 {10,13,5,{1950,9,24},0},
+                                 {7,26,3,{1940,6,1},0},
+                                 {8,2,3,{1950,7,2},0},
+                                 {9,2,3,{1950,9,3},0},
+                                 {10,3,5,{1950,9,24},0},
                                  {11,13,1,{1900,10,7},0},
                                  {12,23,4,{1920,11,13},0},
-                                 {13,13,2,{1930,11,9},0},
-                                 {14,13,2,{1930,1,1},0},
-                                 {15,14,2,{1930,12,24},0},
+                                 {13,3,2,{1930,11,9},0},
+                                 {14,3,2,{1930,1,1},0},
+                                 {15,4,2,{1930,12,24},0},
                                  {16,18,5,{1940,12,31},0},
-                                 {17,13,5,{1940,6,15},0},
-                                 {18,14,3,{1950,1,22},0},
-                                 {19,15,4,{1950,1,21},0},
-                                 {20,17,1,{1900,1,21},0},
+                                 {17,17,3,{1940,6,15},0},
+                                 {18,4,3,{1950,1,22},0},
+                                 {19,5,4,{1950,1,21},0},
                                  {21,15,1,{1900,1,21},0},
                                  {22,25,5,{1920,12,8},0},
-                                 {23,15,2,{1930,1,30},0},
-                                 {24,13,2,{1930,1,21},0},
+                                 {23,5,2,{1930,1,30},0},
+                                 {24,6,2,{1930,1,21},0},
                                  {25,16,4,{1930,11,1},0},
-                                 {26,16,3,{1940,11,11},0},
-                                 {27,17,5,{1940,12,28},0},
-                                 {28,17,3,{1950,10,13},0},
-                                 {29,17,3,{1950,11,1},0}};
+                                 {26,6,3,{1940,11,11},0},
+                                 {27,7,5,{1940,12,28},0},
+                                 {28,17,3,{1950,5,3},0},
+                                 {29,7,3,{1950,11,1},0}};
 
 
-    for (i=0;i<29;i++){
+    for (i=0;i<28;i++){
 
          alq[i]=aux1[i];
     }
 
     return res;
 }
-
+*/
 void miFgets(char array[], int tamano)
 {
 
@@ -125,7 +132,23 @@ char getChar2(char mensaje[])
     auxiliar=getch();
     return auxiliar;
 }
+void miPausa(char mensaje[])
+{
+    printf("\n");
+    getChar2(mensaje);
+    printf("\n");
+}
 
+void miCls(void)
+{
+    system("cls");
+}
+void miFflush(void)
+{
+    fflush(stdin);
+}
+
+/*
 char getChoice(Juegos opc[],char titulo[],int CANT,int LENMENU)
 {
     char auxiliar;
@@ -165,7 +188,7 @@ char getChoice(Juegos opc[],char titulo[],int CANT,int LENMENU)
 
     return auxiliar;
 }
-
+*/
 char getChoiceForm(char titulo[],int CANT,int LENMENU)
 {
 
@@ -188,6 +211,53 @@ char getChoiceForm(char titulo[],int CANT,int LENMENU)
 }
 
 //*******************************************
+
+void miTrimCamelLowerCase (const char array_entrada[], char array_salida[])
+{
+    int i;
+    int j=0;
+    int inicioCadena=0;
+    int tamano=strlen(array_entrada);
+    char aux[tamano];
+    char aux2[tamano];
+
+    strcpy(aux2,array_entrada);
+    strlwr(aux2);
+    //Empieza Ltrim
+    miLtrim(aux2,aux2);
+    //Empieza Rtrim
+    miRtrim(aux2,aux2);
+    //Empieza quitar los espacio en medio
+
+    aux[0]='\0';
+    inicioCadena=0;
+    j=0;
+
+    for (i=0; aux2[i]!='\0' ; i++)
+    {
+        if (inicioCadena==0)
+        {
+            aux[j] = toupper(aux2[i]);
+            j++;
+            inicioCadena = 1;
+        }
+        else if (aux2[i]!=' ' && aux2[i-1]== ' ')
+        {
+
+            aux[j] = toupper(aux2[i]);
+            j++;
+        }
+        else if (aux2[i]!=' ' || aux2[i-1]!= ' ')
+        {
+            aux[j] = aux2[i];
+            j++;
+        }
+
+    }
+    aux[j++]='\0';
+    strcpy(array_salida,aux);
+}
+
 
 void miLtrim (const char array_entrada[], char array_salida[])
 {
@@ -226,7 +296,7 @@ void miRtrim (const char array_entrada[], char array_salida[])
     }
 }
 
-void mi_Trim (const char array_entrada[], char array_salida[])
+void miTrim (const char array_entrada[], char array_salida[])
 {
     int i,j=0,inicioCadena=0;
     int tamano=strlen(array_entrada);
@@ -361,9 +431,28 @@ int getInt(int *numero,char mensaje1[],char mensajeError1[],int minimo,int maxim
 
 void getString(char mensaje[],char input[],int tamano)
 {
-    printf("%s",mensaje);
-    fflush(stdin);
-    miFgets(input,tamano);
+    int r;
+    int flagSalida=0;
+
+    do{
+
+        printf("%s",mensaje);
+        fflush(stdin);
+        miFgets(input,tamano);
+
+        if (strlen(input)<0 ||strlen(input)>tamano){
+            printf("Tamano excedigo... reintente\n");
+            continue;
+        }
+        r=esAlfaNumerico(input);
+        if (r!=1){
+            printf("Ingreso Caracteres no Validos... reintente\n");
+            continue;
+        }
+
+        flagSalida=1;
+
+    }while (flagSalida==0);
 
     //scanf ("%[^\n]s", input);
 }
@@ -371,14 +460,14 @@ void getString(char mensaje[],char input[],int tamano)
 int esNumerico(char str[])
 {
     int i=0;
-    int resultado=0;
+    int resultado=1;
     int cant = strlen(str);
 
     for(i=0; i<cant; i++)
         {
             if(!isdigit(str[i]))
             {
-                resultado=1;
+                resultado=-1;
                 break;
             }
         }
@@ -428,7 +517,7 @@ int esAlfaNumerico(char str[])
    }
    return 1;
 }
-
+/*
 int initData(Clientes list[], int lenData)
 {
     int i;
@@ -446,4 +535,147 @@ int initData(Clientes list[], int lenData)
     return resul;
 }
 
+
+*/
+
+int fechaParaOrdenar(int anio,int mes,int dia)
+{
+    int fechaO;
+
+    fechaO=(anio*10000)+(mes*100)+dia;
+
+  return fechaO;
+}
+
+int FechasParaSort(char fechasV[],int lenF)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    int l=0;
+    int r=-1;
+    char diaV[3]={'0','0','\0'};
+    char mesV[3]={'0','0','\0'};
+    char anioV[5]={'0','0','0','0','\0'};
+    int fechaO;
+
+    if (strlen(fechasV)>lenF)
+    {
+        r=-1;
+    }
+    else
+    {
+        for (i=0; i<10; i++)
+            {
+                if (!isdigit(fechasV[i]))
+                {
+                    r=-1;
+                    break;
+                }
+                if (i>=0 && i<2)
+                {
+                    diaV[j]=fechasV[i];
+                    j++;
+                }
+                if (i>=2 && i<4)
+                {
+                    mesV[k]=fechasV[i];
+                    k++;
+                }
+                if (i>=4 && i<8)
+                {
+                    anioV[l]=fechasV[i];
+                    l++;
+                }
+            }
+    }
+    //printf("%s/%s/%s",diaV,mesV,anioV);system("pause");
+    if (atoi(diaV)>29 && atoi(mesV)!=2){
+        return -1;
+    }
+    if (!(atoi(diaV)>0 && atoi(diaV)<=31)){
+        return -1;
+    }
+    if (atoi(diaV)==30 && (atoi(mesV)!=4 && atoi(mesV)!=6 && atoi(mesV)!=9 && atoi(mesV)!=11)){
+        return -1;
+    }
+    if (!(atoi(mesV)>0 && atoi(mesV)<=12)){
+        return -1;
+    }
+    /*
+    if (!(atoi(anioV)>=minAnio && atoi(anioV)<=maxAnio)){
+        return -1;
+    }
+    */
+
+    fechaO=((atoi(anioV)*10000)+(atoi(mesV)*100)+(atoi(diaV)));
+    r=fechaO;
+
+return r;
+
+}
+
+int validaFechas(char fechasV[],int lenF,int minAnio, int maxAnio)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    int l=0;
+    int r=-1;
+
+    char diaV[3]={'0','0','\0'};
+    char mesV[3]={'0','0','\0'};
+    char anioV[5]={'0','0','0','0','\0'};
+
+    if (strlen(fechasV)>lenF)
+    {
+        r=-1;
+    }
+    else
+    {
+        for (i=0; i<10; i++)
+            {
+                if (!isdigit(fechasV[i]))
+                {
+                    r=-1;
+                    break;
+                }
+                if (i>=0 && i<2)
+                {
+                    diaV[j]=fechasV[i];
+                    j++;
+                }
+                if (i>=2 && i<4)
+                {
+                    mesV[k]=fechasV[i];
+                    k++;
+                }
+                if (i>=4 && i<8)
+                {
+                    anioV[l]=fechasV[i];
+                    l++;
+                }
+            }
+    }
+    //printf("%s/%s/%s",diaV,mesV,anioV);system("pause");
+    if (atoi(diaV)>29 && atoi(mesV)!=2){
+        return -1;
+    }
+    if (!(atoi(diaV)>0 && atoi(diaV)<=31)){
+        return -1;
+    }
+    if (atoi(diaV)==30 && (atoi(mesV)!=4 && atoi(mesV)!=6 && atoi(mesV)!=9 && atoi(mesV)!=11)){
+        return -1;
+    }
+    if (!(atoi(mesV)>0 && atoi(mesV)<=12)){
+        return -1;
+    }
+    if (!(atoi(anioV)>=minAnio && atoi(anioV)<=maxAnio)){
+        return -1;
+    }
+    r=1;
+
+return r;
+
+}
 

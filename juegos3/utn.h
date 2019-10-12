@@ -5,7 +5,7 @@
  * \return
  *
  */
-int hardCord(Juegos gam[],int len);
+//int hardCord(Juegos gam[],int len);
 
 
 /** \brief
@@ -15,7 +15,7 @@ int hardCord(Juegos gam[],int len);
  * \return
  *
  */
-int hardCord2(Clientes clie[],int len);
+//int hardCord2(Clientes clie[],int len);
 
 /** \brief
  *
@@ -24,7 +24,7 @@ int hardCord2(Clientes clie[],int len);
  * \return
  *
  */
-int hardCord3(Alquileres alq[],int len);
+//int hardCord3(Alquileres alq[],int len);
 
 /** \brief
  *
@@ -51,7 +51,7 @@ char getChoiceForm(char titulo[],int CANT,int LENMENU);
  * \return
  *
  */
-char getChoice(Juegos opc[],char titulo[],int CANT,int LENMENU);
+//char getChoice(Juegos opc[],char titulo[],int CANT,int LENMENU);
 
 /** \brief
  *
@@ -89,7 +89,7 @@ void miRtrim (const char array_entrada[], char array_salida[]);
  * \return cadena devuelta sin espacios iniciales ni finales
  *
  */
-void mi_Trim (const char array_entrada[], char array_salida[]);
+void miTrim (const char array_entrada[], char array_salida[]);
 
 /** \brief controla el ingreso de numeros float
  *
@@ -185,7 +185,7 @@ void rellena_Espacio (char caracter,int can_col,int can_fila);
  *
  */
 
-int initData(Clientes list[], int lenData);
+//int initData(Clientes list[], int lenData);
 
 /** \brief
  *
@@ -195,3 +195,17 @@ int initData(Clientes list[], int lenData);
  *
  */
 char muestraMenu(void);
+
+void miPausa(char mensaje[]);
+
+void miCls(void);
+
+void miFflush(void);
+
+void miTrimCamelLowerCase (const char array_entrada[], char array_salida[]);
+
+int validaFechas(char fechasV[],int lenF,int minAnio, int maxAnio);
+
+int fechaParaOrdenar(int anio,int mes,int dia);
+
+int FechasParaSort(char fechasV[],int lenF);
