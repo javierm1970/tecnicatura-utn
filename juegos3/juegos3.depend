@@ -117,3 +117,34 @@
 	"clientes.h"
 	"utn.h"
 
+1572153883 source:d:\recuperatorio lab-1\juegos3\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"clientes.h"
+	"utn.h"
+
+1572151310 d:\recuperatorio lab-1\juegos3\clientes.h
+
+1572130974 d:\recuperatorio lab-1\juegos3\utn.h
+
+1572151598 source:d:\recuperatorio lab-1\juegos3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"clientes.h"
+	"utn.h"
+
+1572152918 source:d:\recuperatorio lab-1\juegos3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"clientes.h"
+	"utn.h"
+

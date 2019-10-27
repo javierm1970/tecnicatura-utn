@@ -1100,32 +1100,32 @@ void bubbleSortAlqFecha (Alquileres* list ,int len)
         }
         else
         {
-            if(cantJueAlq<cantJueMenor)
+            if(cantJueMenor>cantJueAlq)
             {
                 cantJueMenor=cantJueAlq;
             }
         }
         cantJueAlq=0;
-
     }
-
+//***********************************************************************
      for (j=0;j<lenJ;j++)
      {
         for (k=0;k<len;k++)
         {
-            if(list[k].CodJuego==list3[j].id)
+            if(list[k].CodJuego==list3[j].id && list[k].isEmpty==0)
             {
                 cantJue2++;
             }
         }
+        //printf("%d   %d",cantJue2,list[k].CodJuego);
+        //system("pause");
         if (cantJue2==cantJueMenor)
         {
-            gam=findJuegoByDesc(list3,lenJ,list[j].CodJuego);
+            gam=findJuegoByDesc(list3,lenJ,list3[j].id);
             //printf("\n  %d",cantJue2);
             printOneJuego(gam);
         }
         cantJue2=0;
-
      }
     printf("\n");
     return res;

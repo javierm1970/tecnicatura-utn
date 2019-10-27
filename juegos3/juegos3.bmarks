@@ -3,13 +3,11 @@
 	<ActiveTarget name="Debug" />
 	<File name="clientes.h" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
-		<BrowseMarks positions="" />
-		<Book_Marks positions="" />
 	</File>
-	<File name="utn.c" open="1" top="0" tabpos="0">
+	<File name="clientes.c" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
-		<BrowseMarks positions="" />
-		<Book_Marks positions="" />
+		<BrowseMarks positions="0" />
+		<Book_Marks positions="14151,26071,26569,26730,26594,25818,27905,26529,27036,27058,27761,41577,41759,35848,35716,15261,20270,15409,12642,12998" />
 	</File>
 	<File name="main.c" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
@@ -18,12 +16,10 @@
 	</File>
 	<File name="utn.h" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="utn.c" open="1" top="1" tabpos="0">
+		<Cursor position="0" topLine="0" />
 		<BrowseMarks positions="" />
 		<Book_Marks positions="" />
-	</File>
-	<File name="clientes.c" open="1" top="1" tabpos="0">
-		<Cursor position="0" topLine="0" />
-		<BrowseMarks positions="0" />
-		<Book_Marks positions="14303,14525,14593,12934,25818,27905,26529,27036,27058,27761,41577,41759,35848,35716,15261,20270,15409,12642,12998,14151" />
 	</File>
 </BrowseTracker_layout_file>
