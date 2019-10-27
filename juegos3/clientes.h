@@ -279,3 +279,40 @@ int AlquileresPorFecha(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,i
  * \return
  *
  */
+
+Clientes carga_Clientes(Clientes cli3,int len,int id);
+
+int addCliente(Clientes* list, int len, int id, char name[],char lastName[],
+                               char domicilio[],char sexo,char telefono[]);
+
+int removeCliente(Clientes* list,int len);
+
+Clientes llenacliente(Clientes clie[],Clientes cli,int id,int len);
+
+int isAvailable(Clientes* list, int len);
+
+int findClientById(Clientes* list, int len,int id);
+
+int findRegistroClient(Clientes* list, int len,int id);
+
+int ModificaUnCliente (Clientes* list,int len);
+
+void juegosSortDesc (Juegos* list ,int len);
+
+int findJuegoByID (Juegos* list,int lenJ,int idJ);
+
+void clienteSortLastName(Clientes* list ,int len);
+
+void clienteSortId(Clientes* list ,int len);
+
+Alquileres carga_Alquileres(Clientes clien[],Juegos gam[], int lenCli,int lenJue,int idAlq);
+
+float findJuegoByDesc2(Juegos* list,int lenJ,int idJ,char resul[]);
+
+int addAlquileres(Alquileres* list, int len, int idA,int idC,int idJ,Fecha fecAlq);
+
+int AlquileresPorFechaxClientes(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ);
+
+int AlquileresPorFechaxJuegos(Alquileres* list,Clientes* list2,Juegos* list3,int lenA,int lenC,int lenJ);
+
+void insertion(Clientes data[],int len);

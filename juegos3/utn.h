@@ -5,7 +5,7 @@
  * \return
  *
  */
-//int hardCord(Juegos gam[],int len);
+int hardCord(Juegos gam[],int len);
 
 
 /** \brief
@@ -15,7 +15,7 @@
  * \return
  *
  */
-//int hardCord2(Clientes clie[],int len);
+int hardCord2(Clientes clie[],int len);
 
 /** \brief
  *
@@ -24,7 +24,7 @@
  * \return
  *
  */
-//int hardCord3(Alquileres alq[],int len);
+int hardCord3(Alquileres alq[],int len);
 
 /** \brief
  *
@@ -194,6 +194,8 @@ void rellena_Espacio (char caracter,int can_col,int can_fila);
  * \return
  *
  */
+char getChar(char mensaje[]);
+
 char muestraMenu(void);
 
 void miPausa(char mensaje[]);
