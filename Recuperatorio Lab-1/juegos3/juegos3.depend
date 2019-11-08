@@ -148,3 +148,25 @@
 	"clientes.h"
 	"utn.h"
 
+1572151598 source:d:\varios utn\examen 8-10\ultimo\recuperatorio lab-1\juegos3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"clientes.h"
+	"utn.h"
+
+1572151310 d:\varios utn\examen 8-10\ultimo\recuperatorio lab-1\juegos3\clientes.h
+
+1572130974 d:\varios utn\examen 8-10\ultimo\recuperatorio lab-1\juegos3\utn.h
+
+1572154057 source:d:\varios utn\examen 8-10\ultimo\recuperatorio lab-1\juegos3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"clientes.h"
+	"utn.h"
+

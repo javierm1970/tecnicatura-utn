@@ -1334,6 +1334,8 @@ int removeCliente(Clientes* list,int len)
         system("cls");
         getChoiceForm("Baja de Clientes",1,78);
 
+        printClientes(list,len);
+
         r2=getInt(&idE,"Ingrese Id (1-1000): ","Error Numero invalido, verifique el rango",1,1000);
 
         r=findClientById(list,len,idE);
@@ -1513,6 +1515,8 @@ int ModificaUnCliente (Clientes* list,int len)
 
     getChoiceForm("Modifica clientes",1,78);
 
+    printClientes(list,len);
+
     getInt(&idE,"Ingrese Id (1-1000): ","Error Numero invalido, verifique el rango",1,1000);
 
     r=findClientById(list,len,idE);
@@ -1672,6 +1676,8 @@ Alquileres carga_Alquileres(Clientes clien[],Juegos gam[], int lenCli,int lenJue
         getChoiceForm("Alta de Alquileres",1,78);
         printf("\nCodigo de Alquiler: %d\n",idAlq);
 
+        printClientes(clien,lenCli);
+
         fflush(stdin);
         getInt(&codC,"\nIngrese Codigo de Cliente: ","Error el Cliente NO Existe ",1,lenCli);
 
@@ -1689,6 +1695,8 @@ Alquileres carga_Alquileres(Clientes clien[],Juegos gam[], int lenCli,int lenJue
         valida_sector=1;
 
      }while(valida_sector!=1);
+
+     printJuegos(gam,lenJue);
 
     do{
         fflush(stdin);
